@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="トフシマークのブログ - 最新情報や役立つ知識を発信するシンプルなブログサイト">
+  <meta name="keywords" content="ブログ, SEO, トフシマーク, 情報発信">
+  <title>トフシマークのブログ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>トフシマークのブログ</h1>
+    <nav>
+      <a href="index.html">ホーム</a>
+      <a href="#">カテゴリー</a>
+      <a href="#">お問い合わせ</a>
+    </nav>
+  </header>
+
+  <!-- 広告（上部） -->
+  <div class="ad-space">広告スペース</div>
+
+  <main>
+    <section id="articles">
+      <h2>最新記事</h2>
+      <div id="article-list"></div>
+    </section>
+  </main>
+
+  <!-- 広告（下部） -->
+  <div class="ad-space">広告スペース</div>
+
+  <footer>
+    <p>&copy; 2025 トフシマークのブログ</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="記事タイトル - トフシマークのブログ">
+  <meta name="keywords" content="ブログ, 記事, トフシマーク">
+  <title>記事タイトル - トフシマークのブログ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="index.html">トフシマークのブログ</a></h1>
+  </header>
+
+  <!-- 広告（上部） -->
+  <div class="ad-space">広告スペース</div>
+
+  <main>
+    <article>
+      <h1>記事タイトル</h1>
+      <p class="date">2025-08-10</p>
+
+      <!-- 広告（本文中） -->
+      <div class="ad-space">広告スペース</div>
+
+      <p>ここに記事の本文が入ります。SEOを意識して見出し（H2・H3）を適切に使います。</p>
+    </article>
+  </main>
+
+  <!-- 広告（下部） -->
+  <div class="ad-space">広告スペース</div>
+
+  <footer>
+    <p>&copy; 2025 トフシマークのブログ</p>
+  </footer>
+</body>
+</html>
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #0073e6;
+}
+
+main {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+h2 {
+  border-left: 4px solid #0073e6;
+  padding-left: 10px;
+}
+
+.ad-space {
+  background: #eee;
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px;
+  color: #777;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+}
+// 記事データ（あとで追加可能）
+const articles = [
+  {
+    title: "ブログ開設のメリット",
+    date: "2025-08-01",
+    link: "post.html"
+  },
+  {
+    title: "SEO対策の基本",
+    date: "2025-08-05",
+    link: "post.html"
+  }
+];
+
+const articleList = document.getElementById('article-list');
+
+articles.forEach(article => {
+  const el = document.createElement('div');
+  el.className = "article-item";
+  el.innerHTML = `
+    <h3><a href="${article.link}">${article.title}</a></h3>
+    <p>${article.date}</p>
+  `;
+  articleList.appendChild(el);
+});
